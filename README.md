@@ -1,60 +1,54 @@
-## Master AI Agentic Engineering -  build autonomous AI Agents
+# EngineeringTeam Crew
 
-### 6 week journey to code and deploy AI Agents with OpenAI Agents SDK, CrewAI, LangGraph, AutoGen and MCP
+Welcome to the EngineeringTeam Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
-![Autonomous Agent](assets/autonomy.png)
+## Installation
 
-_If you're looking at this in Cursor, please right click on the filename in the Explorer on the left, and select "Open preview", to view the formatted version._
+Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
 
-I couldn't be more excited to welcome you! This is the start of your 6 week adventure into the powerful, astonishing and often surreal world of Agentic AI.
+First, if you haven't already, install uv:
 
-### Before you begin
+```bash
+pip install uv
+```
 
-I'm here to help you be most successful! Please do reach out if I can help, either in the platform or by emailing me direct (ed@edwarddonner.com). It's always great to connect with people on LinkedIn to build up the community - you'll find me here:  
-https://www.linkedin.com/in/eddonner/  
-And this is new to me, but I'm also trying out X/Twitter at [@edwarddonner](https://x.com/edwarddonner) - if you're on X, please show me how it's done 😂  
+Next, navigate to your project directory and install the dependencies:
 
-### The not-so-dreaded setup instructions
+(Optional) Lock the dependencies and install them by using the CLI command:
+```bash
+crewai install
+```
+### Customizing
 
-Perhaps famous last words: but I really, truly hope that I've put together an environment that will be not too horrific to set up!
+**Add your `OPENAI_API_KEY` into the `.env` file**
 
-- Windows people, your instructions are [here](setup/SETUP-PC.md)
-- Mac people, yours are [here](setup/SETUP-mac.md)
-- Linux people, yours are [here](setup/SETUP-linux.md)
+- Modify `src/engineering_team/config/agents.yaml` to define your agents
+- Modify `src/engineering_team/config/tasks.yaml` to define your tasks
+- Modify `src/engineering_team/crew.py` to add your own logic, tools and specific args
+- Modify `src/engineering_team/main.py` to add custom inputs for your agents and tasks
 
-Any problems, please do contact me.
+## Running the Project
 
-### Important notes for CrewAI week (Week 3)
+To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
 
-Windows PC users: you will need to have checked the "gotcha #4" at the top of the [SETUP-PC](setup/SETUP-PC.md) instructions -- installing Microsoft Build Tools.  
-If you don't do this, then CrewAI will fail with an obscure error involving Chroma..
+```bash
+$ crewai run
+```
 
+This command initializes the engineering_team Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-Then, you will need to run this command in a Cursor Terminal in the project root directory in order to run the Crew commands:  
-`uv tool install crewai`   
-And in case you've used Crew before, it might be worth doing this to make sure you have the latest:  
-`uv tool upgrade crewai`  
+This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
 
-Then please keep in mind for Crew:
+## Understanding Your Crew
 
-1. There are two ways that you can work on the CrewAI project in week 3. Either review the code for each project while I build it, and then do `crewai run` to see it in action. Or if you prefer to be more hands-on, then create your own Crew project from scratch to mirror mine; for example, create `my_debate` to go alongside `debate`, and write the code alongside me. Either approach works!  
-2. Windows users: there's a new issue that was recently introduced by one of Crew's libraries. Until this is fixed, you might get a "unicode" error when you try to run `crewai create crew`.  If that happens, please try running this command in the Terminal first: `$env:PYTHONUTF8 = "1"`  
-3. Gemini users: in addition to a key in your `.env` file for `GOOGLE_API_KEY`, you will need an identical key for `GEMINI_API_KEY`
+The engineering_team Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
-### Super useful resources
+## Support
 
-- The course [resources](https://edwarddonner.com/2025/04/21/the-complete-agentic-ai-engineering-course/) with videos
-- Many essential guides in the [guides](guides/01_intro.ipynb) section
-- The [troubleshooting](setup/troubleshooting.ipynb) notebook
+For support, questions, or feedback regarding the EngineeringTeam Crew or crewAI.
+- Visit our [documentation](https://docs.crewai.com)
+- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
+- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
+- [Chat with our docs](https://chatg.pt/DWjSBZn)
 
-### API costs - please read me!
-
-This course does involve making calls to OpenAI and other frontier models, requiring an API key and a small spend, which we set up in the SETUP instructions. If you'd prefer not to spend on API calls, there are cheaper alternatives like DeepSeek and free alternatives like using Ollama!
-
-Details are [here](guides/09_ai_apis_and_ollama.ipynb).
-
-Be sure to monitor your API costs to ensure you are totally happy with any spend. For OpenAI, the dashboard is [here](https://platform.openai.com/usage).
-
-### ABOVE ALL ELSE -
-
-Be sure to have fun with the course! You could not have picked a better time to be learning about Agentic AI. I hope you enjoy every single minute! And if you get stuck at any point - [contact me](https://www.linkedin.com/in/eddonner/).
+Let's create wonders together with the power and simplicity of crewAI.
