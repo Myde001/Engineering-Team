@@ -1,4 +1,4 @@
-# EngineeringTeam Crew
+# Engineering Team Crew
 
 Welcome to the Engineering Team project, powered by [crewAI](https://crewai.com). This project is designed to set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. The goal is to enable agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
